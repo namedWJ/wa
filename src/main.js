@@ -4,9 +4,12 @@ import router from './router';
 
 // 组件
 import wTag from '@/components/w-tag.vue'
+import wSimpleRadio from '@/components/w-simpleRadio.vue';
+
 
 const components = {
-  wTag
+  wTag,
+  wSimpleRadio,
 };
 // 组件注册
 Object.keys(components).forEach((key) => {

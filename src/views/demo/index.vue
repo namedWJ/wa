@@ -10,12 +10,32 @@
                 <w-tag type="events">促活中</w-tag>
             </div>
         </div>
+        <!-- 应用于协议之前的打勾 -->
+        <div class="tag-show">
+            <p class="title">radio</p>
+            <div class="block">
+                <w-simple-radio v-model="radioVal" label="1" @click="setRadioVal()"></w-simple-radio>
+                <w-simple-radio v-model="radioVal" label="2" @click="setRadioVal()"></w-simple-radio>
+                <w-simple-radio v-model="singleRadioVal" @click="setRadioVal('single')"></w-simple-radio>
+            </div>
+        </div>
     </div>
 </template>
 <script>
 export default {
     data() {
-        return {};
+        return {
+            radioVal: '1',
+            singleRadioVal: true,
+        };
+    },
+    methods: {
+        setRadioVal(type) {
+            // eslint-disable-next-line no-console
+            !type && console.log(this.radioVal);
+            // eslint-disable-next-line no-console
+            type && console.log(this.singleRadioVal);
+        },
     },
 };
 </script>
