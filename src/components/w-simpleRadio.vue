@@ -2,7 +2,7 @@
  * @Author: Austin.Wang 
  * @Date: 2019-10-17 19:37:36 
  * @Last Modified by: Austin.Wang
- * @Last Modified time: 2019-10-17 19:53:29
+ * @Last Modified time: 2019-10-18 09:40:35
  */
 <template>
     <div>
@@ -32,9 +32,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@choosed: url('../assets/radio_img/choosed.png');
-@unchoosed: url('../assets/radio_img/unchoosed.png');
-@w: 46.875rem;
+@unchoosed: url('../assets/radio_img/choosed.png');
+@choosed: url('../assets/radio_img/unchoosed.png');
+@import url('../less/common.less');
 .option-btn {
     position: relative;
     float: right;

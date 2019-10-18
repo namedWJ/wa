@@ -19,6 +19,16 @@
                 <w-simple-radio v-model="singleRadioVal" @click="setRadioVal('single')"></w-simple-radio>
             </div>
         </div>
+        <!-- 基层输入框 -->
+        <div class="tag-show">
+            <p class="title">基层输入框</p>
+            <div class="block">
+                <w-input v-model="baseInput" placeholder="请输入提示文案" size="big"></w-input>
+                <w-input v-model="baseInput" placeholder="请输入提示文案"></w-input>
+                <w-input v-model="baseInput2" placeholder="带清除的" clearable></w-input>
+                <w-input v-model="baseInput3" placeholder="提示文案" title="标题名称" right></w-input>
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -27,6 +37,9 @@ export default {
         return {
             radioVal: '1',
             singleRadioVal: true,
+            baseInput: '',
+            baseInput2: '',
+            baseInput3: '',
         };
     },
     methods: {
@@ -40,16 +53,16 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-@b: 46.875rem;
+@w: 46.875rem;
 body, html {
     font-size: 0;
     background-color: #f2f4f6;
 }
 .title {
-    margin: 12/@b 0;
-    padding-left: 24/@b;
+    margin: 12/@w 0;
+    padding-left: 24/@w;
     color: #333;
-    font-size: 24/@b;
+    font-size: 24/@w;
 }
 .block {
     display: flex;
@@ -57,15 +70,15 @@ body, html {
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-bottom: 12/@b;
+    margin-bottom: 12/@w;
     background-color: #fff;
     &.search-block {
         box-sizing: border-box;
-        padding-left: 16/@b;
+        padding-left: 16/@w;
         justify-content: flex-start;
-        width: 726/@b;
-        height: 104/@b;
-        border-radius: 12/@b;
+        width: 726/@w;
+        height: 104/@w;
+        border-radius: 12/@w;
     }
     .title {
         text-align: center;
@@ -79,7 +92,7 @@ body, html {
 }
 .btn-b {
     button {
-        margin: 8/@b;
+        margin: 8/@w;
     }
 }
 </style>
