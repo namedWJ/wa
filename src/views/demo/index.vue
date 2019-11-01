@@ -1,5 +1,6 @@
 <template>
     <div>
+        <div>just for test</div>
         <!-- 标签模块 -->
         <div class="tag-show">
             <p class="title">标签</p>
