@@ -5,14 +5,20 @@ import '@/less/common.less';
 
 // 组件
 import wTag from '@/components/w-tag.vue'
+import wButton from '@/components/w-button.vue'
 import wSimpleRadio from '@/components/w-simpleRadio.vue';
 import wInput from '@/components/w-input.vue';
+import wForm from '@/components/form/w-form.vue';
+import wFormItem from '@/components/form/w-form-item.vue';
 
 
 const components = {
   wTag,
+  wButton,
   wSimpleRadio,
   wInput,
+  wForm,
+  wFormItem,
 };
 // 组件注册
 Object.keys(components).forEach((key) => {

@@ -16,6 +16,10 @@ export const constantRoutes = [
             },
         ],
     },
+    {
+        path: '/form',
+        component: () => import('@/views/form/index'),
+    },
 ];
 
 const createRouter = () => new Router({

@@ -2,7 +2,7 @@
  * @Author: Austin.Wang 
  * @Date: 2019-10-18 10:37:28 
  * @Last Modified by: Austin.Wang
- * @Last Modified time: 2019-10-18 10:51:12
+ * @Last Modified time: 2019-12-11 00:13:13
  */
 <template>
     <div :class="['normal', size]">
@@ -27,7 +27,11 @@
     </div>
 </template>
 <script>
+import Emitter from '@/mixins/emitter.js';
+
 export default {
+    name: 'wInput',
+    mixins: [ Emitter ],
     props: {
         title: String,
         value: [String, Number],
@@ -79,6 +83,7 @@ export default {
                 return;
             }
             this.$emit('input', evt.target.value);
+            this.dispatch('wFormItem', 'on-form-change', evt.target.value);
         },
         handleFocus(evt) {
             this.focused = true;
@@ -87,6 +92,7 @@ export default {
         handleBlur(evt) {
             this.focused = false;
             this.$emit('blur', evt);
+            this.dispatch('wFormItem', 'on-form-blur', evt.target.value);
         },
         handleChange(evt) {
             this.$emit('change', evt.target.value);
