@@ -15,9 +15,9 @@
         <div class="tag-show">
             <p class="title">radio</p>
             <div class="block">
-                <w-simple-radio v-model="radioVal" label="1" @click="setRadioVal()"></w-simple-radio>
-                <w-simple-radio v-model="radioVal" label="2" @click="setRadioVal()"></w-simple-radio>
-                <w-simple-radio v-model="singleRadioVal" @click="setRadioVal('single')"></w-simple-radio>
+                <w-checkbox v-model="radioVal" label="1" @click="setRadioVal()"></w-checkbox>
+                <w-checkbox v-model="radioVal" label="2" @click="setRadioVal()"></w-checkbox>
+                <w-checkbox v-model="singleRadioVal" @click="setRadioVal('single')"></w-checkbox>
             </div>
         </div>
         <!-- 基层输入框 -->
